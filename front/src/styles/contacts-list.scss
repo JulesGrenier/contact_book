@@ -1,0 +1,33 @@
+@import './my-framework/config.scss';
+
+.contacts-list{
+  height: 100vh;
+
+  .contact{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover{
+      background: rgba($grey_secondary, .5);
+    }
+
+    &.active{
+      background: $grey_secondary;
+    }
+
+    .contact-avatar{
+      display: inline-block;
+      width: 80px;
+      border-radius: 50%;
+    }
+
+    .contact-name{
+      margin: 0;
+      margin-left: 1.5em;
+    }
+
+  }
+
+}
