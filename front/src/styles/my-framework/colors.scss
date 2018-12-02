@@ -1,0 +1,26 @@
+@import './config.scss';
+
+.bg-white-primary{
+  background: $white_primary!important;
+  color: $black_primary!important;
+}
+
+.bg-white-secondary{
+  background: $white_secondary!important;
+  color: $black_primary!important;
+}
+
+.bg-grey-primary{
+  background: $grey_primary!important;
+  color: $black_primary!important;
+}
+
+.bg-grey-secondary{
+  background: $grey_secondary!important;
+  color: $black_secondary!important;
+}
+
+.bg-black-primary{
+  background: $black_primary!important;
+  color: $white_primary!important;
+}
