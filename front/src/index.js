@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 
 import 'semantic-ui-css/semantic.min.css';
 import './styles/my-framework/index.scss';
+import './styles/backgrounds.scss';
 import './styles/ui-config.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));

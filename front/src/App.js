@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
 import ContactsListContainer from './containers/ContactsListContainer';
+import ContactContainer from './containers/ContactContainer';
 import Header from './components/Header';
 
 class App extends Component {
@@ -25,7 +26,7 @@ class App extends Component {
             </Grid.Column>
             
             <Grid.Column mobile={16} tablet={9} computer={11}>
-
+              <ContactContainer />
             </Grid.Column>
           </Grid.Row>
         </Grid>

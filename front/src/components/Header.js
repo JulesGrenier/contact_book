@@ -6,9 +6,9 @@ import '../styles/header.scss';
 const Header = () => {
   return (
     <div id='header'>
-      <div className="header-top d-flex justify-between align-center py-1-5 px-1">
-        <UIHeader as='h1' className="mb-0">Contacts</UIHeader>
-        <Icon size='large' corner name='add' />
+      <div className="header-top d-flex justify-content-between align-items-center py-1_5 px-1">
+        <UIHeader as="h1" className="mb-0">Contacts</UIHeader>
+        <Icon size='large' corner name='add' className="c-pointer" />
       </div>
       
       <div className="header-bottom bg-grey-primary py-1 px-2">
