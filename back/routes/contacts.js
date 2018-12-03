@@ -5,7 +5,7 @@ const connection = require('../helpers/database');
 const table = 'contacts';
 
 router.get('/', (req, res) => {
-  connection.query(`SELECT * FROM ${table}`, (error, results) => {
+  connection.query(`SELECT id, contact_avatar, firstname, lastname FROM ${table}`, (error, results) => {
     if(error){
       return res.status(500).send(`Unexpected error: ${error.message}`);
     }
