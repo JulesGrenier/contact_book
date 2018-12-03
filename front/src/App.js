@@ -2,27 +2,15 @@ import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
 import ContactsListContainer from './containers/ContactsListContainer';
 import ContactContainer from './containers/ContactContainer';
-import Header from './components/Header';
 
 class App extends Component {
   render() {
     return (
       <div className="app">
-        <Grid centered doubling stackable divided>
-          <Grid.Row>
-            <Grid.Column mobile={16} tablet={7} computer={5}>
-              <Grid.Row>
-
-                <Grid.Column width={16}>
-                  <Header />
-                </Grid.Column>
-
-                <Grid.Column width={16}>
-                  <ContactsListContainer />
-                </Grid.Column>
-
-              </Grid.Row>
-
+        <Grid doubling stackable>
+          <Grid.Row className="pb-0 pt-1 px-1">
+            <Grid.Column mobile={16} tablet={7} computer={5} className="border-right">
+              <ContactsListContainer />
             </Grid.Column>
             
             <Grid.Column mobile={16} tablet={9} computer={11}>

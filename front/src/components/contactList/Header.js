@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header as UIHeader, Input, Icon } from 'semantic-ui-react';
 
-import '../styles/header.scss';
+import '../../styles/header.scss';
 
 const Header = () => {
   return (
