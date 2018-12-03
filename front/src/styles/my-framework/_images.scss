@@ -1,0 +1,12 @@
+img{
+  display: inline-block;
+
+  &.circle{
+    border-radius: 50%;
+  }
+
+  &.rounded{
+    border-radius: .25em;
+  }
+
+}
