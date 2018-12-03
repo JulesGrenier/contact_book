@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const connection = require('../helpers/db');
+const connection = require('../helpers/database');
 
 const table = 'contacts';
 
