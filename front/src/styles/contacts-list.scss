@@ -2,32 +2,39 @@
 
 .contacts-list{
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 
-  .contact{
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+  .contacts{
+    flex: 1 1;
+    overflow-y: auto;
 
-    &:hover{
-      background: rgba($grey_secondary, .5);
+    .contact{
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+  
+      &:hover{
+        background: rgba($grey_secondary, .5);
+      }
+  
+      &.active{
+        background: $grey_secondary;
+      }
+  
+      .contact-avatar{
+        display: inline-block;
+        width: 80px;
+        border-radius: 50%;
+      }
+  
+      .contact-name{
+        margin: 0;
+        margin-left: 1.5em;
+      }
+  
     }
-
-    &.active{
-      background: $grey_secondary;
-    }
-
-    .contact-avatar{
-      display: inline-block;
-      width: 80px;
-      border-radius: 50%;
-    }
-
-    .contact-name{
-      margin: 0;
-      margin-left: 1.5em;
-    }
-
   }
 
 }
