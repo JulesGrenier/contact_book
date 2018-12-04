@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { fetchContacts, fetchSelectedContact } from '../actions/index';
 import ContactsList from '../components/contactList/ContactsList';
 
 class ContactsListContainer extends Component {
@@ -6,24 +8,31 @@ class ContactsListContainer extends Component {
   constructor(props){
     super(props);
 
-    this.state = {
-      contacts: []
-    }
+    this.selectContact = this.selectContact.bind(this);
   }
 
   componentWillMount(){
-    fetch('api/contacts')
-    .then(res => res.json())
-    .then(contacts => this.setState({ contacts }))
+    this.props.fetchContacts();
+  }
+
+  selectContact(id){
+    console.log(id)
+    // this.props.fetchSelectedContact(id);
   }
   
   render() {
+
+    const { contacts } = this.props;
     return (
       <Fragment>
-        <ContactsList contacts={this.state.contacts} />
+        <ContactsList contacts={contacts} selectContact={() => this.selectContact()} />
       </Fragment>
     );
   }
 }
 
-export default ContactsListContainer;
+const mapStateToProps = state => ({
+  contacts: state.contacts.list,
+});
+
+export default connect(mapStateToProps, { fetchContacts, fetchSelectedContact })(ContactsListContainer);
