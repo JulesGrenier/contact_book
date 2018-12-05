@@ -16,8 +16,7 @@ class ContactsListContainer extends Component {
   }
 
   selectContact(id){
-    console.log(id)
-    // this.props.fetchSelectedContact(id);
+    this.props.fetchSelectedContact(id);
   }
   
   render() {
@@ -25,7 +24,7 @@ class ContactsListContainer extends Component {
     const { contacts } = this.props;
     return (
       <Fragment>
-        <ContactsList contacts={contacts} selectContact={() => this.selectContact()} />
+        <ContactsList contacts={contacts} selectContact={(id) => this.selectContact(id)} />
       </Fragment>
     );
   }

@@ -20,7 +20,7 @@ export default (state = initialState, action) => {
       case FETCH_SELECTED_CONTACT:
         return {
           ...state,
-          item: action.content
+          selected: action.content
         }
       
       case GET_SELECTED_CONTACT:
